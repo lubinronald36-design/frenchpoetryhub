@@ -4,7 +4,10 @@
     <title>French Poems</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            f<audio id="myAudio" autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+</audio>ont-family: Arial, sans-serif;
             background-color: #FFC0CB; /* Pink background */
             margin:<body>
     <audio id="myAudio" autoplay loop>
@@ -71,17 +74,18 @@
     </div>
 	<div class="footer"> RonPoems! </div>
 
-   <script>
-    window.addEventListener('load', function() {
-        var audio = document.getElementById("myAudio");
-        audio.play();
-        var scrollInterval = setInterval(function() {
-            window.scrollBy(0, 1);
-            if (window.scrollY >= document.body.scrollHeight - window.innerHeight) {
-                clearInterval(scrollInterval);
-            }
-        }, 50); // adjust the speed here (lower is faster)
-    });
+  <script>
+    var scrollSpeed = 1;
+    var scrollDirection = 1;
+    function autoScroll() {
+        window.scrollBy(0, scrollSpeed * scrollDirection);
+        if (window.scrollY >= document.body.scrollHeight - window.innerHeight) {
+            scrollDirection = -1;
+        } else if (window.scrollY <= 0) {
+            scrollDirection = 1;
+        }
+    }
+    setInterval(autoScroll, 50);
 </script>
 </body>
 </html>
