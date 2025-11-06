@@ -16,17 +16,32 @@
       <div class="poem">
         <h2>Demain, dès l'aube</h2>
         <h3>Victor Hugo</h3>
-        <p id="poem-1-text">
-          Demain, dès l'aube, je partirai. Vois-tu, je sais que tu m'attends.
-        </p>
+        <p id="poem-1-text"> Demain, dès l'aube, je partirai. Vois-tu, je sais que tu m'attends. </p>
       </div>
       <!-- Add 9 more poems -->
       <div class="poem">
         <h2>La Cigale et la Fourmi</h2>
         <h3>Jean de La Fontaine</h3>
-        <p id="poem-2-text">
-          La cigale…
-          body {
+        <p id="poem-2-text"> La cigale ayant chanté tout l'été...</p>
+      </div>
+    </div>
+    <div class="definitions">
+      <h2>Definitions</h2>
+      <div id="definition"></div>
+    </div>
+  </div>
+  <footer>
+    <p>Contact: +1234567890</p>
+  </footer>
+  <audio id="background-music" src="your_music_file.mp3" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+/* style.css */
+body {
   background-color: #4567b7; /* Blue background */
   font-family: Arial, sans-serif;
 }
@@ -65,9 +80,14 @@ footer {
   padding: 10px;
   background-color: #333;
   color: #fff;
-}document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('background-music').play();
+}
 
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('background-music').play();
+  
   // Automatic scrolling
   const poemsContainer = document.querySelector('.poems');
   let scrollTop = 0;
@@ -96,7 +116,7 @@ footer {
   });
 
   function getDefinition(word) {
-    fetch(https://api.dictionaryapi.dev/api/v2/entries/en/${word})
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
       .then((response) => response.json())
       .then((data) => {
         if (data && data[0] && data[0].meanings && data[0].meanings[0] && data[0].meanings[0].definitions && data[0].meanings[0].definitions[0] && data[0].meanings[0].definitions[0].definition) {
