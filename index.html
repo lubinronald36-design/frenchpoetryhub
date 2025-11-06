@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,16 +27,19 @@
 </head>
 <body>
   <audio id="myAudio" autoplay loop muted="false" playsinline>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mp3">
+    <source src="https:                                                                          
     Your browser does not support the audio tag.
   </audio>
 
   <!-- Poem sections -->
   <div class="poem">
     <h2>Le Lac</h2>
-    <p>Demain, dès l'aube, je partirai.<br> Vois-tu, je sais que tu m'attends.<br> J'irai par la forêt, j'irai par la montagne.<br> Je ne puis demeurer loin de toi plus longtemps.</p>
+    <p>Demain, dès l'aube, je partirai.<br>
+      Vois-tu, je sais que tu m'attends.<br>
+      J'irai par la forêt, j'irai par la montagne.<br>
+      Je ne puis demeurer loin de toi plus longtemps.</p>
   </div>
-  <!-- More poem sections -->
+
   <div class="poem">
     <h2>Lanmou</h2>
     <p>Nan lari Pòtoprens, lanmou nou danse</p>
@@ -48,10 +50,15 @@
     <p>Jis pou nou viv, lanmou nou pou tout tan</p>
   </div>
 
-  <div class="footer">RonPoems!</div><p>The <span title="A feeling of deep affection">love</span> in my <span title="The organ that pumps blood">heart</span></p>
-<p>Shines like a <span title="A source of light">star</span> in the <span title="The night sky">night</span></p>
-<p>Guiding me through life's <span title="A challenging or difficult situation">storms</span></p>
-<p>To a place of <span title="A state of peace or tranquility">calm</span> and <span title="A feeling of happiness">joy</span></p>
+  <div class="poem">
+    <h2>The Love in My Heart</h2>
+    <p>The <span title="A feeling of deep affection">love</span> in my <span title="The organ that pumps blood">heart</span></p>
+    <p>Shines like a <span title="A source of light">star</span> in the <span title="The night sky">night</span></p>
+    <p>Guiding me through life's <span title="A challenging or difficult situation">storms</span></p>
+    <p>To a place of <span title="A state of peace or tranquility">calm</span> and <span title="A feeling of happiness">joy</span></p>
+  </div>
+
+  <div class="footer">RonPoems!</div>
 
   <script>
     var scrollSpeed = 1;
@@ -65,7 +72,6 @@
       }
     }
     setInterval(autoScroll, 50);
-
     document.addEventListener('click', function() {
       var audio = document.getElementById("myAudio");
       audio.muted = false;
